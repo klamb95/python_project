@@ -12,3 +12,6 @@ class TestGame(unittest.TestCase):
 
     def test_game_has_date(self):
         self.assertEqual("12/07/2021", self.game.date)
+
+    def test_game_has_venue(self):
+        self.assertEqual("Peffermill", self.game.venue)
