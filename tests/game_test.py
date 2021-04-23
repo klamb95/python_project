@@ -25,4 +25,7 @@ class TestGame(unittest.TestCase):
     def test_game_has_team_1_score(self):
         self.assertEqual(1, self.game.team_1_score)
 
+    def test_game_has_team_2_score(self):
+        self.assertEqual(1, self.game.team_2_score)
+
     
