@@ -9,3 +9,7 @@ def save(team):
     results = run_sql(sql, values)
     id = results[0]['id']
     team.id = id
+
+def delete_all():
+    sql = "DELETE FROM teams"
+    run_sql(sql)
