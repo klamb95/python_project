@@ -28,7 +28,8 @@ player_repository.select_all()
 
 # player_repository.delete(12)
 
-
+player_1.name = "Gwen"
+player_repository.update(player_1)
 
 # team_repository.select(87)
 
