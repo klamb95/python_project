@@ -7,4 +7,5 @@ class TestTeam(unittest.TestCase):
         self.team = Team("Grange", "Nike")
 
     
-    
+    def test_team_has_name(self):
+        self.assertEqual("Grange", self.team.name)
