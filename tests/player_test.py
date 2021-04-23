@@ -15,3 +15,5 @@ class TestPlayer(unittest.TestCase):
     def test_player_has_postion(self):
         self.assertEqual("Centre Back", self.player.position)
 
+    def test_player_has_team(self):
+        self.assertEqual(1, self.player.team)
