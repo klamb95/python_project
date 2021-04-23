@@ -11,4 +11,7 @@ class TestPlayer(unittest.TestCase):
     
     def test_player_has_name(self):
         self.assertEqual("Kieran Lamb", self.player.name)
-        
+
+    def test_player_has_postion(self):
+        self.assertEqual("Centre Back", self.player.position)
+
