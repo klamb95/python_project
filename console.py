@@ -16,3 +16,5 @@ team_repository.save(team_3)
 # team_repository.select(23)
 
 team_repository.select_all()
+
+# team_repository.delete(30)
