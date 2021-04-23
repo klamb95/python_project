@@ -13,3 +13,10 @@ def save(team):
 def delete_all():
     sql = "DELETE FROM teams"
     run_sql(sql)
+
+def select(id):
+    sql = "SELECT * FROM teams WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    team = Team(result["name"], result["sponsor"], result["id"])
+    return team
