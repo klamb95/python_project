@@ -38,3 +38,8 @@ def select(id):
         team = team_repository.select(result['team_id'])
         player = Player(result['name'], result['position'], team, result['id'])
     return player
+
+def delete(id):
+    sql = "DELETE FROM players WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
