@@ -7,3 +7,5 @@ team_repository.delete_all()
 
 team_1 = Team("Grange", "Nike")
 team_repository.save(team_1)
+
+team_repository.select(23)
