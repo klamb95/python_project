@@ -29,3 +29,8 @@ def select_all():
         team = Team(result["name"], result["sponsor"], result["id"])
         teams.append(team)
     return teams
+
+def delete(id):
+    sql = "DELETE FROM teams WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
