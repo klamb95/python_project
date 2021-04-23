@@ -24,6 +24,8 @@ player_repository.save(player_2)
 
 player_repository.select_all()
 
+player_repository.select(10)
+
 
 
 # team_repository.select(87)

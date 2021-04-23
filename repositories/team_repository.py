@@ -39,3 +39,5 @@ def update(team):
     sql = "UPDATE teams SET (name, sponsor) = (%s, %s) WHERE id = %s"
     values = [team.name, team.sponsor, team.id]
     run_sql(sql, values)
+
+
