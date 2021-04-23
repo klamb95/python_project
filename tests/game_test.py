@@ -15,3 +15,8 @@ class TestGame(unittest.TestCase):
 
     def test_game_has_venue(self):
         self.assertEqual("Peffermill", self.game.venue)
+
+    def test_game_has_team_1(self):
+        self.assertEqual(1, self.game.team_1)
+
+    
