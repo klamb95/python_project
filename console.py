@@ -8,23 +8,24 @@ import repositories.player_repository as player_repository
 
 team_repository.delete_all()
 
-team1 = Team("Grange", "Nike")
-team_repository.save(team1)
-team2 = Team("Inverleith", "Adidas")
-team_repository.save(team2)
-team3 = Team("Kelburn", "Puma")
-team_repository.save(team3)
+team_1 = Team("Grange", "Nike")
+team_repository.save(team_1)
+team_2 = Team("Inverleith", "Adidas")
+team_repository.save(team_2)
+team_3 = Team("Kelburn", "Puma")
+team_repository.save(team_3)
 
-player1 = Player("Kieran Lamb", "Centre Back", 60)
+player_1 = Player("Kieran", "Centre Back", team_1)
+player_repository.save(player_1)
 
 
 
-# team_repository.select(23)
+# team_repository.select(87)
 
 # team_repository.select_all()
 
-# team_repository.delete(30)
+# team_repository.delete(88)
 
-# team3.name = "Grangess"
-# team_repository.update(team3)
+# team_3.name = "Grangess"
+# team_repository.update(team_3)
 
