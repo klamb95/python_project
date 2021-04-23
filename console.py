@@ -3,6 +3,9 @@ import pdb
 from models.team import Team
 import repositories.team_repository as team_repository
 
+from models.player import Player
+import repositories.player_repository as player_repository
+
 team_repository.delete_all()
 
 team1 = Team("Grange", "Nike")
@@ -11,6 +14,9 @@ team2 = Team("Inverleith", "Adidas")
 team_repository.save(team2)
 team3 = Team("Kelburn", "Puma")
 team_repository.save(team3)
+
+player1 = Player("Kieran Lamb", "Centre Back", 60)
+
 
 
 # team_repository.select(23)

@@ -5,4 +5,10 @@ from models.team import Team
 def delete_all():
     sql = "DELETE FROM players "
     run_sql(sql)
-    
+
+def save(player):
+    sql = "INSERT INTO players (name, position, team) VALUES (%s, %s, %s) RETURNING id"
+    values = [player.name, player.position, player.team]
+    results = run_sql(sql, values)
+    id = results[0]['id']
+    player.id = id
