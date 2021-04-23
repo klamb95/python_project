@@ -26,7 +26,7 @@ player_repository.select_all()
 
 # player_repository.select(10)
 
-player_repository.delete(12)
+# player_repository.delete(12)
 
 
 
