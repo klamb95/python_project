@@ -25,3 +25,16 @@ def select_all():
         team = team_repository.select(row['team_id'])
         player = Player(row['name'], row['position'], team, row['id'])
         players.append(player)
+
+
+def select(id):
+    player = None
+
+    sql = "SELECT * FROM players WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        team = team_repository.select(result['team_id'])
+        player = Player(result['name'], result['position'], team, result['id'])
+    return player
