@@ -19,6 +19,11 @@ team_repository.save(team_3)
 player_1 = Player("Kieran Lamb", "Centre Back", team_1)
 player_repository.save(player_1)
 
+player_2 = Player("Aidan Lamb", "Left back", team_2)
+player_repository.save(player_2)
+
+player_repository.select_all()
+
 
 
 # team_repository.select(87)
