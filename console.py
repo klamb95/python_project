@@ -7,6 +7,7 @@ from models.player import Player
 import repositories.player_repository as player_repository
 
 team_repository.delete_all()
+player_repository.delete_all()
 
 team_1 = Team("Grange", "Nike")
 team_repository.save(team_1)
@@ -15,7 +16,7 @@ team_repository.save(team_2)
 team_3 = Team("Kelburn", "Puma")
 team_repository.save(team_3)
 
-player_1 = Player("Kieran", "Centre Back", team_1)
+player_1 = Player("Kieran Lamb", "Centre Back", team_1)
 player_repository.save(player_1)
 
 
