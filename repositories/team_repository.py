@@ -20,3 +20,12 @@ def select(id):
     result = run_sql(sql, values)[0]
     team = Team(result["name"], result["sponsor"], result["id"])
     return team
+
+def select_all():
+    teams = []
+    sql = "SELECT * FROM teams"
+    results = run_sql(sql)
+    for result in results:
+        team = Team(result["name"], result["sponsor"], result["id"])
+        teams.append(team)
+    return teams
