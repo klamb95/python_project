@@ -15,3 +15,15 @@ def save(game):
     game.id = id
     return game
 
+def select_all():
+    games = []
+
+    sql = "SELECT * FROM games"
+    results = run_sql(sql)
+    for row in results:
+        team = team_repository.select(row['team_id'])
+        game = Game(row['date'], row['venue'], team_1, team_2, row['team_1_score'], row['team_2_score'], row['id'])
+        games.append(game)
+    return games
+
+
