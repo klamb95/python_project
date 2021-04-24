@@ -6,6 +6,9 @@ import repositories.team_repository as team_repository
 from models.player import Player
 import repositories.player_repository as player_repository
 
+from models.game import Game
+import repositories.game_repository as game_repository
+
 team_repository.delete_all()
 player_repository.delete_all()
 
@@ -28,9 +31,12 @@ player_repository.save(player_3)
 player_4 = Player("Stuart", "GK", team_1)
 player_repository.save(player_4)
 
-player_repository.select_all()
+game_1 = Game("12/07/95", "Peffermill", team_1, team_2, 1, 1)
+game_repository.save(game_1)
 
-team_repository.players(team_1)
+# player_repository.select_all()
+
+# team_repository.players(team_1)
 
 # player_repository.select(10)
 

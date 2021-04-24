@@ -5,10 +5,9 @@ import repositories.team_repository as team_repository
 
 def save(game):
     sql = "INSERT INTO games (date, venue, team_1_id, team_2_id, team_1_score, team_2_score) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
-    values = [game.date, game.venue, game.team_1.id, game.team_2.id]
+    values = [game.date, game.venue, game.team_1.id, game.team_2.id, game.team_1_score, game.team_2_score]
     results = run_sql(sql, values)
     id = results[0]['id']
     game.id = id
     return game
 
-    

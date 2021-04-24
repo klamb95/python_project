@@ -8,3 +8,5 @@ class Game:
         self.team_1_score = team_1_score
         self.team_2_score = team_2_score
         self.id = id
+
+        
