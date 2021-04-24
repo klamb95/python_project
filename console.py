@@ -44,6 +44,8 @@ game_repository.save(game_3)
 game_4 = Game("20/06/2012", "Aberdeen", team_2, team_3, 10, 4)
 game_repository.save(game_4)
 
+game_repository.select_all()
+
 
 # player_repository.select_all()
 

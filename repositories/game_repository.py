@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.team import Team
+from models.game import Game
 
 import repositories.team_repository as team_repository
 
@@ -21,9 +22,12 @@ def select_all():
     sql = "SELECT * FROM games"
     results = run_sql(sql)
     for row in results:
-        team = team_repository.select(row['team_id'])
+        team_1 = team_repository.select(row['team_1_id'])
+        team_2 = team_repository.select(row['team_2_id'])
         game = Game(row['date'], row['venue'], team_1, team_2, row['team_1_score'], row['team_2_score'], row['id'])
         games.append(game)
     return games
 
+
+# SELECT * FROM games WHERE team_1_id = 34 OR team_2_id = 34
 
