@@ -13,6 +13,7 @@ team_repository.delete_all()
 player_repository.delete_all()
 game_repository.delete_all()
 
+
 team_1 = Team("Grange", "Nike")
 team_repository.save(team_1)
 team_2 = Team("Inverleith", "Adidas")
@@ -41,11 +42,16 @@ game_repository.save(game_2)
 game_3 = Game("4/03/2008", "Glasgow Green", team_2, team_1, 2, 4)
 game_repository.save(game_3)
 
-game_4 = Game("20/06/2012", "Aberdeen", team_2, team_3, 10, 4)
-game_repository.save(game_4)
+# game_4 = Game("20/06/2012", "Aberdeen", team_2, team_3, 10, 4)
+# game_repository.save(game_4)
+
 
 
 team_repository.games(team_1)
+
+
+
+pdb.set_trace()
 
 # game_4.date = "0000000"
 # game_4.venue = "test"
@@ -80,4 +86,3 @@ team_repository.games(team_1)
 # team_3.name = "Grangess"
 # team_repository.update(team_3)
 
-pdb.set_trace()
