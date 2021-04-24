@@ -58,7 +58,7 @@ def players(team):
 def games(team):
     games = []
 
-    sql = "SELECT * FROM games where team_1_id = %s OR team_2_id = %s"
+    sql = "SELECT * FROM games WHERE team_1_id = %s OR team_2_id = %s "
     values = [team.id]
     results = run_sql(sql, values)
 

@@ -44,6 +44,9 @@ game_repository.save(game_3)
 game_4 = Game("20/06/2012", "Aberdeen", team_2, team_3, 10, 4)
 game_repository.save(game_4)
 
+
+team_repository.games(team_1)
+
 # game_4.date = "0000000"
 # game_4.venue = "test"
 # game_4.team_1_score = 1
