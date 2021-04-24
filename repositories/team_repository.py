@@ -41,3 +41,16 @@ def update(team):
     run_sql(sql, values)
 
 
+
+def players(team):
+    players = []
+
+    sql = "SELECT * FROM players WHERE team_id = %s"
+    values = [team.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        player = Player(row['name'], row['position'], team, row['id'] )
+        players.append(player)
+    return players
+

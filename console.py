@@ -40,4 +40,3 @@ player_repository.select_all()
 # team_3.name = "Grangess"
 # team_repository.update(team_3)
 
-pdb.set_trace()
