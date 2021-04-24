@@ -46,6 +46,8 @@ game_repository.save(game_4)
 
 game_repository.select_all()
 
+game_repository.select(21)
+
 
 # player_repository.select_all()
 

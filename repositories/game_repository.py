@@ -31,7 +31,7 @@ def select_all():
 def select(id):
     game = None
 
-    sql = "SELECT * FROM games WHERE team_1_id = %s OR team_2_id = %s"
+    sql = "SELECT * FROM games WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
 
@@ -39,8 +39,7 @@ def select(id):
         team_1 = team_repository.select(result['team_1_id'])
         team_2 = team_repository.select(result['team_2_id'])
         game = Game(result['date'], result['venue'], team_1, team_2, result['team_1_score'], result['team_2_score'], result['id'])
-    return game 
-
+    return game
 
 # SELECT * FROM games WHERE team_1_id = 34 OR team_2_id = 34
 
