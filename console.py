@@ -11,6 +11,7 @@ import repositories.game_repository as game_repository
 
 team_repository.delete_all()
 player_repository.delete_all()
+game_repository.delete_all()
 
 team_1 = Team("Grange", "Nike")
 team_repository.save(team_1)
@@ -33,6 +34,7 @@ player_repository.save(player_4)
 
 game_1 = Game("12/07/95", "Peffermill", team_1, team_2, 1, 1)
 game_repository.save(game_1)
+
 
 # player_repository.select_all()
 
