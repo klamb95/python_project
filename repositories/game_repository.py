@@ -41,5 +41,9 @@ def select(id):
         game = Game(result['date'], result['venue'], team_1, team_2, result['team_1_score'], result['team_2_score'], result['id'])
     return game
 
-# SELECT * FROM games WHERE team_1_id = 34 OR team_2_id = 34
+def delete(id):
+    sql = "DELETE FROM games WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
 
