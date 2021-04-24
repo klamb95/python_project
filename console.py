@@ -22,7 +22,15 @@ player_repository.save(player_1)
 player_2 = Player("Aidan Lamb", "Left back", team_2)
 player_repository.save(player_2)
 
+player_3 = Player("Gwen", "Centre mid", team_1)
+player_repository.save(player_3)
+
+player_4 = Player("Stuart", "GK", team_1)
+player_repository.save(player_4)
+
 player_repository.select_all()
+
+team_repository.players(team_1)
 
 # player_repository.select(10)
 
@@ -40,3 +48,4 @@ player_repository.select_all()
 # team_3.name = "Grangess"
 # team_repository.update(team_3)
 
+pdb.set_trace()
