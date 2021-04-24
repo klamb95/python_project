@@ -54,3 +54,9 @@ def players(team):
         players.append(player)
     return players
 
+def games(team):
+    games = []
+
+    sql = "SELECT * FROM games where team_1_id = %s OR team_2_id = %s"
+    
+
