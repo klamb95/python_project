@@ -11,8 +11,8 @@ def teams():
 
 @teams_blueprint.route("/teams/<id>")
 def show_team(id):
-    
     # players = team_repository.players(id)
     games = team_repository.games(id)
     team = team_repository.select(id)
-    return render_template("teams/show.html", games=games, team=team)
+    return render_template("teams/show.html",games=games, team=team)
+
