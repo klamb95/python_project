@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 app.register_blueprint(teams_blueprint)
 app.register_blueprint(games_blueprint)
+app.register_blueprint(players_blueprint)
 
 
 @app.route("/")
