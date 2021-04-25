@@ -1,4 +1,4 @@
-{% extends "base.html" %} 
+{% extends 'base.html' %}
 {% block content %}
 
 <h2>Teams</h2>
@@ -8,6 +8,7 @@
 <section>
     <p>{{ team.name }}</p>
     <p>{{ team.sponsor }}</p>
+    <a href="/teams/{{team.id}}">Details</a>
 </section>
 
 {% endfor %} 
