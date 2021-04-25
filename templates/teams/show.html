@@ -1,0 +1,10 @@
+{{  extends "base.html" }}
+
+<h2>{{ team.name }}</h2>
+
+<ul>
+    {% for game in games %}
+    <li>{{game.date}}</li>
+    <li>{{game.venue}}</li>
+    <li>{{game.team_1}}</li>
+</ul>
