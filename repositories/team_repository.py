@@ -63,8 +63,6 @@ def games(team):
   
 
     for row in results:
-        # team_1 = team_repository.select(result['team_1_id'])
-        # team_2 = team_repository.select(result['team_2_id'])
         game = Game(row['date'], row['venue'], row['team_1_id'], row['team_2_id'], row['team_1_score'], row['team_2_score'], row['id'])
         games.append(game)
     return games
