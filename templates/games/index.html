@@ -12,6 +12,7 @@
 <p>Away: {{game.team_2.name}}</p>
 <p>Home Score: {{game.team_1_score}}</p>
 <p>Away Score: {{game.team_2_score}}</p>
+<a href="/games/{{game.id}}/edit">Edit</a>
 <form action="/games/{{ game.id }}/delete" method="POST">
 <input type="submit" value="delete"/>
 <br>

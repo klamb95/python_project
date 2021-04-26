@@ -14,12 +14,13 @@ player_repository.delete_all()
 game_repository.delete_all()
 
 
-team_1 = Team("Grange", "Nike")
+team_1 = Team("Grange Mens 1s", "Commercial Water Solutions")
 team_repository.save(team_1)
-team_2 = Team("Inverleith", "Adidas")
+team_2 = Team("Grove Menzieshill Hockey 1s", "Focus")
 team_repository.save(team_2)
-team_3 = Team("Kelburn", "Puma")
+team_3 = Team("Western Wildcats", "Puma")
 team_repository.save(team_3)
+
 
 player_1 = Player("Kieran Lamb", "Centre Back", team_1)
 player_repository.save(player_1)
