@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% block content %}
+
+<h2>Add New Team to League</h2>
+<form action="/teams" method="POST">
+<div>
+    <label for="name">Team Name:</label>
+    <input type="text" id="name" name= "name">
+</div>
+<div>
+    <label for="sponsor">Team Sponsor:</label>
+    <input type="text" id="sponsor" name= "sponsor">
+</div>
+<div>
+    <input type="submit">
+</div>
+</form>
+
+{% endblock %}

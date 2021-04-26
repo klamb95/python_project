@@ -25,3 +25,11 @@ def show_team(id):
     games = team_repository.games(id)
     team = team_repository.select(id)
     return render_template("teams/show.html", games=games, team=team)
+
+@teams_blueprint.route("/teams/new")
+def new_team():
+    return render_template("teams/new.html")
+
+# @zombies_blueprint.route("/teams", methods=["POST"])
+# def create_team():
+    
