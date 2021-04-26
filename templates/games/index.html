@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%block content %}
+
+<h2>Games in League</h2>
+
+{%for game in games %}
+
+<section>
+<p>Date: {{game.date}}</p>
+<p>Venue: {{game.venue}}</p>
+<p>Home: {{game.team_1}}</p>
+<p>Away: {{game.team_2}}</p>
+<p>Home Score: {{game.team_1_score}}</p>
+<p>Away Score: {{game.team_2_score}}</p>
+<br>
+</section>
+
+{%endfor %}
+{% endblock %}

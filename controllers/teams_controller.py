@@ -14,11 +14,7 @@ def teams():
 # def show_team(id):
 #     # players = team_repository.players(id)
 #     games = team_repository.games(id)
-#     team_1_name = team_repository.select(games.team_1)['name']
-#     team_2_name = team_repository.select(games.team_2)['name']
-#     games.team_1 = team_1_name
-#     games.team_2 = team_2_name
-#     return render_template("teams/show.html",games=games, team_1 = team_1, team_2 = team_2)
+#     return render_template("teams/show.html",games=games)
 
 
 @teams_blueprint.route("/teams/<id>")
