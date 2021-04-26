@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from repositories import team_repository
+from models.team import Team
 
 teams_blueprint = Blueprint("teams", __name__)
 
@@ -30,10 +31,10 @@ def show_team(id):
 def new_team():
     return render_template("teams/new.html")
 
-@zombies_blueprint.route("/teams", methods=["POST"])
+@teams_blueprint.route("/teams", methods=["POST"])
 def create_team():
-    name = request.form("name")
-    sponsor = request.form("sponsor")
+    name = request.form["name"]
+    sponsor = request.form["sponsor"]
     new_team = Team(name, sponsor)
     team_repository.save(new_team)
     return redirect("/teams")
