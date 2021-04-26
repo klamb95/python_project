@@ -1,6 +1,7 @@
 from db.run_sql import run_sql
 from models.team import Team
 from models.game import Game
+import pdb 
 
 import repositories.team_repository as team_repository
 
@@ -18,7 +19,6 @@ def save(game):
 
 def select_all():
     games = []
-
     sql = "SELECT * FROM games"
     results = run_sql(sql)
     for row in results:
@@ -26,6 +26,7 @@ def select_all():
         team_2 = team_repository.select(row['team_2_id'])
         game = Game(row['date'], row['venue'], team_1, team_2, row['team_1_score'], row['team_2_score'], row['id'])
         games.append(game)
+    
     return games
 
 def select(id):

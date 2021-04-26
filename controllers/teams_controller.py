@@ -10,18 +10,15 @@ def teams():
     teams = team_repository.select_all()
     return render_template("teams/index.html", teams = teams)
 
-# @teams_blueprint.route("/teams/<id>")
-# def show_team(id):
-#     # players = team_repository.players(id)
-#     games = team_repository.games(id)
-#     return render_template("teams/show.html",games=games)
-
-
 @teams_blueprint.route("/teams/<id>")
 def show_team(id):
+    # players = team_repository.players(id)
     games = team_repository.games(id)
     team = team_repository.select(id)
-    return render_template("teams/show.html", games=games, team=team)
+    return render_template("teams/show.html",games=games, team=team)
+
+
+
 
 @teams_blueprint.route("/teams/new")
 def new_team():

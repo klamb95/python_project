@@ -42,11 +42,11 @@ def update(team):
 
 
 
-def players(team):
+def players(id):
     players = []
 
     sql = "SELECT * FROM players WHERE team_id = %s"
-    values = [team.id]
+    values = [id]
     results = run_sql(sql, values)
 
     for row in results:
@@ -56,17 +56,20 @@ def players(team):
 
 def games(id):
     games = []
-
+    
     sql = "SELECT * FROM games WHERE team_1_id = %s OR team_2_id = %s"
     values = [id, id]
+    team_1 = select(id)
+    team_2 = select(id)
     results = run_sql(sql, values)
   
 
     for row in results:
-        game = Game(row['date'], row['venue'], row['team_1_id'], row['team_2_id'], row['team_1_score'], row['team_2_score'], row['id'])
+        game = Game(row['date'], row['venue'], team_1, team_2, row['team_1_score'], row['team_2_score'], row['id'])
         games.append(game)
     return games
     
+     
 
 
 
