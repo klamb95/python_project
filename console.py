@@ -47,7 +47,7 @@ game_repository.save(game_3)
 
 
 
-team_repository.games(team_1)
+# team_repository.games(team_1)
 
 
 

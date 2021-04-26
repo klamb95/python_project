@@ -9,11 +9,11 @@
     <p>Name: {{ team.name }}</p>
     <p>Sponsor: {{ team.sponsor }}</p>
     <a href="/teams/{{team.id}}">Details</a>
-</section>
-<p>
     <form action="/teams/{{ team.id }}/delete" method="POST">
-    <input type="submit" value="delete" />
-</p>
+    <input type="submit" value="delete"/>
+    </form>
+</section>
+
 
 {% endfor %} 
 {% endblock %}
