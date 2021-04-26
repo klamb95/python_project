@@ -56,15 +56,14 @@ def players(id):
 
 def games(id):
     games = []
-    
     sql = "SELECT * FROM games WHERE team_1_id = %s OR team_2_id = %s"
     values = [id, id]
-    team_1 = select(id)
-    team_2 = select(id)
     results = run_sql(sql, values)
   
 
     for row in results:
+        team_1 = select(row['team_1_id'])
+        team_2 = select(row['team_2_id'])
         game = Game(row['date'], row['venue'], team_1, team_2, row['team_1_score'], row['team_2_score'], row['id'])
         games.append(game)
     return games
