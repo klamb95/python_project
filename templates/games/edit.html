@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Update Game</h2>
+<form action="/games/{{game.id}}" method="POST">
+    <div>
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" >
+    </div>
+    <div>
+        <label for="venue">Venue:</label>
+        <input type="text" id='venue' name='venue'>
+    </div>
+    <div>
+        <label for="team_1">Home:</label>
+        <select name="team_1_id" id="team_1">
+            {%for team in teams%}
+            <option value="{{team.id}}">{{team.name}}</option>
+            {%endfor%}
+        </select>
+    </div>
+    <div>
+        <label for="team_2">Away:</label>
+        <select name="team_2_id" id="team_2">
+            {%for team in teams%}
+            <option value="{{team.id}}">{{team.name}}</option>
+            {%endfor%}
+        </select>
+    </div>
+    <div>
+        <label for="team_1_score">Home Score:</label>
+        <input type="number" id='team_1_score' name='team_1_score' >
+    </div>
+    <div>
+        <label for="team_2_score">Away Score:</label>
+        <input type="number" id='team_2_score' name='team_2_score' >
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+
+
+
+</form>
+
+
+{%endblock%}
