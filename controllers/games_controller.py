@@ -23,3 +23,17 @@ def show_game(id):
 def new_game():
     teams = team_repository.select_all()
     return render_template("games/new.html", teams = teams)
+
+@games_blueprint.route("/games", methods = ["POST"])
+def create_game():
+    date = request.form["date"]
+    venue = request.form["venue"]
+    team_1_id = request.form["team_1_id"]
+    team_1 = team_repository.select(team_1_id)
+    team_2_id = request.form["team_2_id"]
+    team_2 = team_repository.select(team_2_id)
+    team_1_score = request.form["team_1_score"]
+    team_2_score = request.form["team_2_score"]
+    new_game = Game(date, venue, team_1, team_2, team_1_score, team_2_score)
+    game_repository.save(new_game)
+    return redirect('/games')
