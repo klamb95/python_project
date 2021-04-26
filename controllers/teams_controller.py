@@ -41,6 +41,7 @@ def create_team():
 
 @teams_blueprint.route("/teams/<id>/delete", methods=['POST'])
 def delete_team(id):
-    teams_repository.delete(id)
+    team_repository.delete(id)
     return redirect('/teams')
+
     
