@@ -44,4 +44,13 @@ def delete_team(id):
     team_repository.delete(id)
     return redirect('/teams')
 
+
+@teams_blueprint.route("/teams/<id>", methods=['POST'])
+def update_team(id):
+    name = request.form["name"]
+    sponsor = request.form["sponsor"]
+    team = Team(name, sponsor)
+    team_repository.update(team)
+    return redirect('/teams')
+
     
