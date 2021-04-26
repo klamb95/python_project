@@ -30,6 +30,11 @@ def show_team(id):
 def new_team():
     return render_template("teams/new.html")
 
-# @zombies_blueprint.route("/teams", methods=["POST"])
-# def create_team():
+@zombies_blueprint.route("/teams", methods=["POST"])
+def create_team():
+    name = request.form("name")
+    sponsor = request.form("sponsor")
+    new_team = Team(name, sponsor)
+    team_repository.save(new_team)
+    return redirect("/teams")
     
