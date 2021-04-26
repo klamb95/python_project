@@ -38,4 +38,9 @@ def create_team():
     new_team = Team(name, sponsor)
     team_repository.save(new_team)
     return redirect("/teams")
+
+@teams_blueprint.route("/teams/<id>/delete", methods=['POST'])
+def delete_team(id):
+    teams_repository.delete(id)
+    return redirect('/teams')
     
