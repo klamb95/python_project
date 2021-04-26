@@ -38,7 +38,7 @@ def create_game():
     game_repository.save(new_game)
     return redirect('/games')
 
-@games_blueprint.route("/teams", methods =["POST"])
-def delete_game():
+@games_blueprint.route("/games/<id>/delete", methods=['POST'])
+def delete_game(id):
     game_repository.delete(id)
     return redirect('/games')
