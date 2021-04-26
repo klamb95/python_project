@@ -18,3 +18,7 @@ def games():
 def show_game(id):
     game = game_repository.select(id)
     return render_template("games/show.html", game)
+
+@games_blueprint.route("/games/new")
+def new_game():
+    return render_template("games/new.html")
