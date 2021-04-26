@@ -21,4 +21,5 @@ def show_game(id):
 
 @games_blueprint.route("/games/new")
 def new_game():
-    return render_template("games/new.html")
+    teams = team_repository.select_all()
+    return render_template("games/new.html", teams = teams)
