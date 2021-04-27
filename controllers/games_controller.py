@@ -44,13 +44,15 @@ def delete_game(id):
     return redirect('/games')
 
 @games_blueprint.route("/games/<id>/edit")
-def edit_team(id):
+def edit_game(id):
     teams = team_repository.select_all()
     game = game_repository.select(id)
+    # team_1 = game.team_1
+    # team_2 = game.team_2
     return render_template("games/edit.html", game = game, teams = teams)
 
 @games_blueprint.route("/games/<id>", methods=['POST'])
-def update_team(id):
+def update_game(id):
     date = request.form["date"]
     venue = request.form["venue"]
     team_1_id = request.form["team_1_id"]
