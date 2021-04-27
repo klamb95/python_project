@@ -11,18 +11,28 @@ body{
   }
   .menu{
       display: flex;
+      justify-content: center;
       list-style-type: none; 
       padding: 0;
       margin: 0;
-      background-color: rgb(247, 100, 100);
+      background-color: rgb(39, 29, 242);
 
   }
 
-  .menu{
-      list-style-type:;
-      text: white;
+  .link{
+    list-style-type: none;
+    color: white;
+    text-align: center;
   }
 
- #teams{
+ .text{
+    color: white;
+    margin: 2px;
+    
      
+
+ }
+
+ h1{
+     text-align: center;
  }
