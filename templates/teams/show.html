@@ -2,14 +2,15 @@
 {% block content %}
 
 <h2>{{ team.name }}</h2>
-<p>Sponsor - {{team.sponsor }}</p>
+<p style="text-align:center">Sponsor - {{team.sponsor }}</p>
 
 <ul>
     {% for game in games %}
-    <li>{{game.date}}</li>
-    <li>{{game.venue}}</li> 
-    <li>Home: {{game.team_1.name}} : {{game.team_1_score}}</li>
-    <li>Away: {{game.team_2.name}} : {{game.team_2_score}}</li>
+    <li class="link" >Home Team - {{game.team_1.name}} : {{game.team_1_score}}</li>
+    <li class="link">Away Team - {{game.team_2.name}} : {{game.team_2_score}}</li>
+    <li class="link">Date - {{game.date}}</li>
+    <li class="link">Venue - {{game.venue}}</li> 
+    
     <br>
     {%endfor%}
    

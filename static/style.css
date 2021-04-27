@@ -8,7 +8,7 @@ body{
     padding: 5px;
     margin: 5px;
     box-sizing: border-box;
-    text-decoration: none;
+    
   }
   .menu{
       display: flex;
@@ -22,19 +22,19 @@ body{
 
   .link{
     list-style-type: none;
-    color: white;
     text-align: center;
+    
   }
 
  .text{
     color: white;
     margin: 2px;
-    
-     
-
  }
 
  h1{
+     text-align: center; 
+ }
+ h2{
      text-align: center;
  }
 
@@ -44,3 +44,11 @@ body{
      height: 250px;
      justify-content: space-around;
  }
+
+.coloured_link{
+    color: rgb(15, 8, 145);
+}
+
+#teams{
+    
+}
